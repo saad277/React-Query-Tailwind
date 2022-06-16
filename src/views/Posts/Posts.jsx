@@ -17,7 +17,7 @@ const Posts = () => {
       </div>
 
       <div className="container mx-auto">
-        {isFetching && (
+        {Boolean(!data.length) && isFetching && (
           <div className="flex justify-center align-center">
             <Loader />
           </div>
@@ -25,7 +25,7 @@ const Posts = () => {
 
         {!!data.length &&
           data.map((item) => {
-            return <Card classes="mb-4" />;
+            return <Card classes="mb-4" {...item} />;
           })}
       </div>
     </>

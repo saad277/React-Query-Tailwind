@@ -8,7 +8,6 @@ const App = () => {
   return (
     <>
       <Navbar />
-
       <Routes>
         <Route path={"/"} element={<Posts />} />
         <Route path="*" element={<Navigate replace to="/" />} />

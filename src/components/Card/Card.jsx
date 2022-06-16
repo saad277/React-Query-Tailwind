@@ -1,18 +1,12 @@
 const Card = (props) => {
-  const { classes = "" } = props;
+  const { classes = "", title = "", body = "" } = props;
 
   return (
     <div className={"max-w-sm w-full lg:max-w-full lg:flex ml-6 " + classes}>
       <div className="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r lg:rounded-l p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
-          <div className="text-gray-900 font-bold text-xl mb-2">
-            Can coffee make you a better developer?
-          </div>
-          <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
-          </p>
+          <div className="text-gray-900 font-bold text-xl mb-2">{title}</div>
+          <p className="text-gray-700 text-base">{body}</p>
         </div>
         <div className="flex items-center">
           <img
