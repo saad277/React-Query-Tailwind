@@ -24,8 +24,8 @@ const Posts = () => {
         )}
 
         {!!data.length &&
-          data.map((item) => {
-            return <Card classes="mb-4" {...item} />;
+          data.map((item, index) => {
+            return <Card key={"post-" + index} classes="mb-4" {...item} />;
           })}
       </div>
     </>
